@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+/* HEADER */
+#logo {
+    background: url(../img/images-removebg-preview.png) no-repeat center center;
+    width: 100vw;
+    height: 12vh;
+    margin: 20px 0;
+  }
+  
+  input,
+  ul {
+    display: none;
+  }
+  
+  #section-header {
+    width: 100%;
+    background: rgba(240, 230, 231, 0.3);
+    padding: 1px;
+  }
+  
+  ul {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+  ul li {
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #3d3d3d;
+    list-style-type: none;
+    text-decoration: none;
+    transition: all 0.6s;
+  }
+  ul li:hover {
+    color: #3d3d3d;
+  }
+  ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgba(0, 100, 52, 0.5);
+    transition: width 0.2s ease-in;
+  }
+  ul a {
+    text-decoration: none;
+  }
+  ul a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: blue;
+    transition: width 0.2s ease-in;
+  }
+  ul a:hover::after {
+    width: 100%;
+  }
+  
+/* SLIDER */
+@-webkit-keyframes slide {
+    0% {
+      background: url(../img/banner1.jpeg) no-repeat center center;
+      background-size: cover;
+    }
+    25% {
+      background: url(../img/banner1.jpg) no-repeat center center;
+      background-size: cover;
+    }
+    50% {
+      background: url(../img/banner2.jpg) no-repeat center center ;
+      background-size: cover;
+    }
+    75% {
+      background: url(../img/banner3.jpeg) no-repeat center center;
+      background-size: cover;
+    }
+    100% {
+      background: url(../img/banner4.jpeg) no-repeat center center;
+      background-size: cover;
+    }
+  }
+  #bg-lg {
+    background: url(../img/banner1.jpeg) no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    float: left;
+    margin: 10px 0;
+    transition: all 5s ease;
+    -webkit-animation: slide 20s infinite;
+            animation: slide 20s infinite;
+  }
+  #bg-lg #searchbar {
+    border: none;
+    max-width: 30%;
+    width: 100%;
+    height: 5vh;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px 20px 0 20px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.5s;
+    display: block;
+    outline: none;
+    color: #4d4d4d;
+    letter-spacing: 1px;
+    border-radius: 5px;
+  }
+  #bg-lg #searchbar:hover {
+    border-radius: 10px;
+  }
+  #bg-lg #searchbar:focus {
+    border-radius: 20px;
+  }
+  
+  input::-moz-placeholder {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.5;
+  }
+  
+  input:-ms-input-placeholder {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.5;
+  }
+  
+  input::placeholder {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.5;
+  }
+  
+  #title {
+    max-width: 40%;
+    width: 100%;
+    color: #434343;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 2%;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    -webkit-animation: fadein 2s;
+    transition: all 0.3s ease;
+    font-size: 62.5%;
+  }
+  #title h3 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  #title p {
+    font-family: Pepitto;
+    text-align: justify;
+    padding: 0 30px 20px 30px;
+    opacity: 0.9;
+    line-height: 2rem;
+    font-style: italic;
+  }
+  #title:hover {
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .feature{
+    width: 3%;
+    height: 15%;
+    padding-left: 15px;
+    padding-top: 4px;
+}
+
+
+#blog .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
+    max-width: 1920px;
+  }
+  #blog .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box, #portfolio .container-xxl .portfolio-box {
+    position: relative;
+    display: block;
+  }
+  #blog .container-fluid .portfolio-box .portfolio-box-caption, #portfolio .container-sm .portfolio-box .portfolio-box-caption, #portfolio .container-md .portfolio-box .portfolio-box-caption, #portfolio .container-lg .portfolio-box .portfolio-box-caption, #portfolio .container-xl .portfolio-box .portfolio-box-caption, #portfolio .container-xxl .portfolio-box .portfolio-box-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    background: rgb(68, 68, 236);
+    transition: opacity 0.25s ease;
+    text-align: center;
+  }
+  #blog .container-fluid .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-category {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  #blog .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-name {
+    font-size: 1.2rem;
+  }
+  #blog .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
+    opacity: 0.75;
+  }
