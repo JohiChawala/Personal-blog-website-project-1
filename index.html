@@ -10,10 +10,12 @@
     <!-- Include the Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Include the AOS cdn link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-light">
     <!-- HEADER -->
-    <section id="section-header">
+    <section id="section-header" class="bg-light">
         <div id="logo"></div>
         <input type="checkbox" id="abc" />
         <label for="abc">
@@ -21,12 +23,29 @@
             <div></div>
             <div></div>
         </label>
-        <ul id="navbar">
-            <a href="#home"><li>home</li></a>
-            <a href="#blog"><li>blog</li></a>
-            <a href="#about"><li>About</li></a>
-            <a href="#contact"><li>Contact</li></a>
-        </ul>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#blog">blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </section>
     <!-- SLIDE -->
     <section id="section-slide">
@@ -45,90 +64,129 @@
                 </form>                
             </div>
     </section>
-        <!-- Blogs-->
-        <div id="blog">
-            <h2 class="text-center mt-0">My Blogs</h2>
-            <hr class="divider" />
-            <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/blog/first-img.jpeg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/blog/first-img.jpeg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Blog Name</div>
-                                <div class="project-details">Blog Explain</div>
-                            </div>
-                        </a>
+    <!-- Blogs-->
+    <section id="blog">
+        <h2 class="text-center mt-0">My Blogs</h2>
+        <div class="container-fluid p-0 m-0">
+            <div class="row">
+                <div class="card mb-3 col-lg-4 col-md-4 col-sm-12" style="max-width: 540px;"  data-aos="fade-up-right" data-aos-duration="1000">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./assets/img/blog/first-img.jpeg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/blog/second-img.jpeg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/blog/second-img.jpeg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Blog Name</div>
-                                <div class="project-details">Blog Explain</div>
-                            </div>
-                        </a>
+                  </div>
+                  <div class="card mb-3 col-lg-4 col-md-4 col-sm-12" style="max-width: 540px;"  data-aos="flip-up"  data-aos-duration="1000">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./assets/img/blog/first-img.jpeg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/blog/third-img.jpeg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/blog/third-img.jpeg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Blog Name</div>
-                                <div class="project-details">Blog Explain</div>
-                            </div>
-                        </a>
+                  </div>
+                  <div class="card mb-3 col-lg-4 col-md-6 col-sm-12" style="max-width: 540px;" data-aos="fade-up-left" data-aos-duration="1000">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./assets/img/blog/first-img.jpeg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/blog/forth-img.jpeg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/blog/forth-img.jpeg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Blog Name</div>
-                                <div class="project-details">Blog Explain</div>
-                            </div>
-                        </a>
+                  </div>
+                  <div class="card mb-3 col-lg-4 col-md-6 col-sm-12" style="max-width: 540px;" data-aos="fade-up-right"  data-aos-duration="1000">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./assets/img/blog/first-img.jpeg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/blog/fifth-img.jpeg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/blog/fifth-img.jpeg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Blog Name</div>
-                                <div class="project-details">Blog Explain</div>
-                            </div>
-                        </a>
+                  </div>
+                  <div class="card mb-3 col-lg-4 col-md-6 col-sm-12" style="max-width: 540px;" data-aos="flip-up"  data-aos-duration="1000">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./assets/img/blog/first-img.jpeg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/blog/sixed-img.jpeg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/blog/sixed-img.jpeg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Blog Name</div>
-                                <div class="project-details">Blog Explain</div>
-                            </div>
-                        </a>
+                  </div>
+                  <div class="card mb-3 col-lg-4 col-md-6 col-sm-12" style="max-width: 540px;" data-aos="fade-up-left"  data-aos-duration="1000">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./assets/img/blog/first-img.jpeg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
                     </div>
-                </div>
-            </div>
+                  </div>
+            </div>  
         </div>
+    </section>
+                  
     <!-- About Section-->
     <section class="bg-light py-5" id="about">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center">
-                <div class="col-xxl-8">
+                <div class="col-lg-6 col-sm-6">
                     <div class="text-center my-5">
                         <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
                         <p class="lead fw-light mb-4">My name is Johi chawala</p>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum itaque qui unde quisquam consequatur autem. Eveniet quasi nobis aliquid cumque officiis sed rem iure ipsa! Praesentium ratione atque dolorem?</p>
                         <div class="d-flex justify-content-center fs-2 gap-4">
                             <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
-                            <a class="text-gradient" href="https://www.linkedin.com/in/johi-chawala-~jc-55648a267/"><i class="bi bi-linkedin"></i></a>
-                            <a class="text-gradient" href="https://github.com/JohiChawala"><i class="bi bi-github"></i></a>
+                            <a class="text-gradient" href=""><i class="bi bi-linkedin"></i></a>
+                            <a class="text-gradient" href=""><i class="bi bi-github"></i></a>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-6 col-sm-12" data-aos="zoom-out-up" data-aos-delay="200">
+                    <img src="assets/img/abou.webp" alt="">
                 </div>
             </div>
         </div>
@@ -173,5 +231,10 @@
     <footer class="py-5 bg-dark">
         <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
